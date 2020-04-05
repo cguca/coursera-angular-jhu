@@ -34,7 +34,8 @@
         {name: "Milk",quantity: "2"},
         {name: "Donuts",quantity: "200"},
         {name: "Cookies",quantity: "300"},
-        {name: "Chocolate", quantity: "5"}
+        {name: "Chocolate", quantity: "5"},
+        {name: "Soda", quantity: "1"}
       ];
 
       var boughtList = [];
