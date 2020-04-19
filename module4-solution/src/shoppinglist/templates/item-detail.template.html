@@ -1,0 +1,15 @@
+<a ui-sref="home">Home</a> &lt;
+<a ui-sref="mainList">List</a> &lt;
+
+<span> {{ itemDetail.name }} </span>  <!-- this is the breadcrumbs -->
+
+<ul> 
+    <!-- <li ng-repeat="item in $ctrl.dishes" > -->
+    <li ng-repeat="item in itemDetail.dishes" >
+        <div>{{ item.name }}</div>
+        <div> - {{ item.description }}</div>
+        <!-- <div>Item name: {{ itemDetail.name }}</div>
+        <div>Item description: {{ itemDetail.description }}</div> -->
+    </li>
+</ul>
+
