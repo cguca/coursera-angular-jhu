@@ -20,9 +20,9 @@ function RoutesConfig($stateProvider, $urlRouterProvider) {
   })
 
   .state('mainList', {
-    // url: '/main-list',
-    url: '/categories',
+    url: '/main-list',
     templateUrl: 'src/menuapp/templates/main-categories.template.html',
+    // templateUrl: 'src/menuapp/templates/main-shoppinglist.template.html',
     controller: 'MainMenuAppController as mainList',
     resolve: {
       items: ['MenuDataService', function (MenuDataService) {
@@ -32,8 +32,7 @@ function RoutesConfig($stateProvider, $urlRouterProvider) {
   })
   
   .state('itemDetail', {
-    // url: '/item-detail/{shortName}',
-    url: '/items/{shortName}',
+    url: '/item-detail/{shortName}',
     templateUrl: 'src/menuapp/templates/item-detail.template.html',
     controller: 'ItemDetailController as itemDetail',
     resolve: {

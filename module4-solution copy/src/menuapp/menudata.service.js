@@ -1,7 +1,7 @@
 (function () {
 'use strict';
 
-angular.module('data')
+angular.module('MenuApp')
 .service('MenuDataService', MenuDataService)
 .constant('ApiBasePath', "https://davids-restaurant.herokuapp.com");
 
@@ -10,8 +10,11 @@ MenuDataService.$inject = ['$http', 'ApiBasePath']
 function MenuDataService($http, ApiBasePath) {
   var service = this;
 
+  // List of shopping items
   var items = [];
 
+
+  // called from routes js.
   service.getAllCategories = function () {
     var promise = $http({
       method: "GET",

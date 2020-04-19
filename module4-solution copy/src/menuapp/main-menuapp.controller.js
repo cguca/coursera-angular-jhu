@@ -2,7 +2,7 @@
 'use strict';
 
 
-angular.module('data')
+angular.module('MenuApp')
 .controller('MainMenuAppController', MainMenuAppController);
 
 
