@@ -7,7 +7,8 @@ angular.module('data')
 ItemDetailController.$inject = ['dishes']
 function ItemDetailController(dishes) {
   var itemDetail = this;
-  itemDetail.dishes = dishes;
+  itemDetail.category = dishes.category.name;
+  itemDetail.dishes = dishes.menu_items;
 }
 
 })();

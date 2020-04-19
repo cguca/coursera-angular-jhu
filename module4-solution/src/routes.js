@@ -41,7 +41,8 @@ function RoutesConfig($stateProvider, $urlRouterProvider) {
             function ($stateParams, MenuDataService) {
               return MenuDataService.getMenuForCategory($stateParams.shortName)
                 .then(function (items) {
-                  return items.data.menu_items;
+                  return items.data;
+                  // return items.data.menu_items;
                 });
               }]
     }
