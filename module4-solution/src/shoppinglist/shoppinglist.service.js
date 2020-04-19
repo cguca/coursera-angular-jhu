@@ -55,8 +55,8 @@ function ShoppingListService($http, ApiBasePath) {
       method: "GET",
       url: (ApiBasePath + "/menu_items.json"),
       params: {
-        // category: shortName
-        category: "B"
+        category: shortName
+        // category: "B"
       }
     });
 

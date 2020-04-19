@@ -44,13 +44,14 @@ function RoutesConfig($stateProvider, $urlRouterProvider) {
   })
   
   .state('itemDetail', {
-    url: '/item-detail/{itemId}',
+    // url: '/item-detail/{itemId}',
+    url: '/item-detail/{shortName}',
     templateUrl: 'src/shoppinglist/templates/item-detail.template.html',
     controller: 'ItemDetailController as itemDetail',
     resolve: {
       dishes: ['$stateParams', 'ShoppingListService',
             function ($stateParams, ShoppingListService) {
-              return ShoppingListService.getMenuForCategory()
+              return ShoppingListService.getMenuForCategory($stateParams.shortName)
                 .then(function (items) {
                   return items.data.menu_items;
                   // return items[$stateParams.itemId];
