@@ -1,8 +1,8 @@
 <ul> 
   <li ng-repeat="item in $ctrl.items.data" 
-      ui-sref="itemDetail({shortName: item.short_name})">
+      ui-sref="itemDetail({shortName: item.short_name})"> <!-- itemId-->
       <!-- ui-sref="itemDetail({itemId: $index})">
     {{ item.quantity }} of {{ item.name }} -->
-    {{ item.name }} {{ item.short_name}}
+    {{ item.name }} {{ item.short_name}} ccc
   </li>
 </ul>
