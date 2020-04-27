@@ -1,0 +1,20 @@
+<div class="container">
+  <!-- Need controller for state 
+  in routes the controller as is menuItemsCtrl
+this template is controller by the menuitemscontroller which is wired in routes
+ 
+menuItemsCtrl comes from routes, menuItems is property exposed in controller, category came from data, name is from data.catgory
+-->
+  <h2 id="menu-categories-title" class="text-center">
+    {{ menuItemsCtrl.menuItems.category.name}} Menu
+  </h2>
+  <div class="text-center">
+    {{ menuItemsCtrl.menuItems.category.special_instructions}}
+  </div>
+<!-- create component for single menu item component.js  menu-item is bound in component.sj-->
+  <menu-item ng-repeat="menuItem in menuItemsCtrl.menuItems.menu_items"
+             menu-item="menuItem"> <!-- attribute comes from item component bindings-->
+  </menu-item>
+
+
+</div>

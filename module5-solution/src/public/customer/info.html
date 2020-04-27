@@ -1,0 +1,29 @@
+<div class="container" ng-show="infoCtrl.theCustomer.firstname">  
+    <div>First Name: {{ infoCtrl.theCustomer.firstname }}</div>
+    <div>Last Name: {{ infoCtrl.theCustomer.lastname }}</div>
+    <div>Email: {{ infoCtrl.theCustomer.email }}</div>
+    <div>Phone: {{ infoCtrl.theCustomer.phone }}</div>
+    <div>Youe favorite dish</div>
+
+    <div class="menu-item-tile col-md-6">
+        <div class="row">
+        <div class="col-sm-5">
+            <div class="menu-item-photo">
+            <!--$ctrl is default label. menuItem is binding in component.sj short-anme for data bound to menuItem 
+            basePath is a property on the item component controller-->
+            <div>{{infoCtrl.theCustomer.favorite.short_name}}</div> 
+            <img class="img-responsive" width="250" height="150" ng-src="{{infoCtrl.basePath}}/images/{{infoCtrl.theCustomer.favorite.short_name}}.jpg" alt="{{infoCtrl.theCustomer.favorite.name}}">
+            </div>
+            <div class="menu-item-price">{{infoCtrl.theCustomer.favorite.favoriteprice_small | currency}}<span> {{infoCtrl.theCustomer.favorite.small_portion_name}}</span> {{infoCtrl.theCustomer.favorite.price_large | currency}} <span>{{infoCtrl.theCustomer.favorite.large_portion_name}}</span></div>
+        </div>
+        <div class="menu-item-description col-sm-7">
+            <h3 class="menu-item-title">{{infoCtrl.theCustomer.favorite.name}}</h3>
+            <p class="menu-item-details">{{infoCtrl.theCustomer.favorite.description}}</p>
+        </div>
+        </div>
+        <hr class="visible-xs">
+    </div> 
+</div>
+<div class="container" ng-hide="infoCtrl.theCustomer.firstname">
+    Plesae go to the Sign Up page to view your information.
+</div>

@@ -1,0 +1,14 @@
+<div class="col-md-3 col-sm-4 col-xs-6 col-xxs-12">
+  <!-- need to pull out data for 1 category 
+   next view state, got to menul controller to get cateogry from short name
+   go to menu.service.js
+    the state is public.menuitems in routes.js need to pass category param
+    it's an object
+  -->
+  <a ui-sref="public.menuitems({category: $ctrl.category.short_name})">
+    <div class="category-tile">
+      <img width="200" height="200" ng-src="images/menu/{{$ctrl.category.short_name}}/{{$ctrl.category.short_name}}.jpg" alt="{{$ctrl.category.name}}">
+      <span>{{$ctrl.category.name}}</span>
+    </div>
+  </a>
+</div>
